@@ -56,7 +56,7 @@ Failures:
      [31m  'a' is not a consonant[0m
      [36m# ./spec/part2_spec.rb:32:in `block (3 levels) in <top (required)>'[0m
 
-Finished in 0.01081 seconds (files took 0.09219 seconds to load)
+Finished in 0.00911 seconds (files took 0.07706 seconds to load)
 [31m34 examples, 1 failure[0m
 
 Failed examples:

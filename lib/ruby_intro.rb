@@ -69,8 +69,8 @@ end
 class BookInStock
 
   def initialize(isbn, price)
-    raise ArgumentError.new("The ISBN can't be empty") if isbn.empty?
-    raise ArgumentError.new("The price must be greater than 0") if price <= 0
+    raise ArgumentError, "The ISBN can't be empty" if isbn.empty? || isbn.nil?
+    raise ArgumentError, "The price must be greater than 0" if price <= 0
     @isbn = isbn
     @price = price
   end
@@ -86,11 +86,19 @@ class BookInStock
 
   #setter methods
   def isbn=(isbn)
-    @isbn = isbn
+    if isbn.empty? || isbn.nil?
+      raise ArgumentError, "The ISBN can't be empty"
+    else
+      @isbn = isbn
+    end
   end
 
   def price=(price)
-    @price = price
+    if price <= 0
+      raise ArgumentError, "The price must be greater than 0"
+    else
+      @price = price
+    end
   end
 
   def price_as_string
