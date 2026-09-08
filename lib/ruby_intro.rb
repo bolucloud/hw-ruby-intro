@@ -11,8 +11,15 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, number)
-  # YOUR CODE HERE
+  if arr.length == 0 || arr.length == 1
+    return false
+  else
+    pairs_of_numbers = arr.combination(2)
+    sum_of_pairs = pairs_of_numbers.any? do | a, b | a + b == number
+    end
+  end
 end
+
 
 # Part 2
 
