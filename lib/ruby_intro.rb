@@ -30,7 +30,9 @@ end
 def starts_with_consonant?(string)
   vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
   if string[0].include?(vowels.to_s)
-    false
+    return false
+  elsif string[0] !~ /[A-Za-z]/
+    return false
   else
     true
   end
