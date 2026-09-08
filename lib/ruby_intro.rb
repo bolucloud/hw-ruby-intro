@@ -28,7 +28,12 @@ def hello(name)
 end
 
 def starts_with_consonant?(string)
-  # YOUR CODE HERE
+  vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+  if string[0].include?(vowels.to_s)
+    false
+  else
+    true
+  end
 end
 
 def binary_multiple_of_4?(string)
