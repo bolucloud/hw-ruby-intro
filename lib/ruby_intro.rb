@@ -48,7 +48,19 @@ def starts_with_consonant?(string)
 end
 
 def binary_multiple_of_4?(string)
-  # YOUR CODE HERE
+  if string.nil? || string.empty?
+    return false
+  end
+
+  if string.match?(/\A[01]+\z/) #binary check
+    if string.to_i(2) % 4 == 0
+      return true
+    else
+      return false
+    end
+  else
+    return false
+  end
 end
 
 # Part 3
