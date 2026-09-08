@@ -28,13 +28,22 @@ def hello(name)
 end
 
 def starts_with_consonant?(string)
-  vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-  if string[0].include?(vowels.to_s)
+  if string.nil? || string.empty?
     return false
-  elsif string[0] !~ /[A-Za-z]/
+  end
+
+  if string[0] >= "A" && string[0] <= "Z"
+    return true
+  elsif string[0] >= "a" && string[0] <= "z"
+    return true
+  else
+    return false
+  end
+
+  if string[0] == "a" || string[0] == "e" || string[0] == "i" || string[0] == "o" || string[0] == "u" || string[0] == "A" || string[0] == "E" || string[0] == "I" || string[0] == "O" || string[0] == "U"
     return false
   else
-    true
+    return true
   end
 end
 
