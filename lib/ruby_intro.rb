@@ -67,5 +67,30 @@ end
 
 # Object representing a book
 class BookInStock
-  # YOUR CODE HERE
+
+  def initialize(isbn, price)
+    raise ArgumentError.new("ISBN can't be empty") if isbn.empty?
+    raise ArgumentError.new("Price must be greater than 0") if price <=0
+    @isbn = isbn
+    @price = price
+  end
+
+  # getter methods
+  def isbn
+    @isbn
+  end
+
+  def price
+    @price
+  end
+
+  #setter methods
+  def isbn=(isbn)
+    @isbn = isbn
+  end
+
+  def price=(price)
+    @price = price
+  end
+
 end
